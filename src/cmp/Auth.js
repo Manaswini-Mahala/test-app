@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
-    Navigate
+    Navigate,
+    Link
   } from "react-router-dom";
 
 class Auth extends Component {
@@ -34,7 +35,7 @@ class Auth extends Component {
     register() {
         console.warn("state", this.state)
         fetch('http://localhost:8080/api1/registration', {
-            method: "POST",
+            method: "PUT",
             headers: {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
@@ -56,7 +57,7 @@ class Auth extends Component {
         var auth = JSON.parse(localStorage.getItem('auth'))
 
         return (
-            <div>
+            <div className='a2'>
 
                 {
                 
@@ -74,8 +75,9 @@ class Auth extends Component {
                             <label>Password</label><br />
                             <input type="text"
                                 onChange={(e) => { this.setState({ password: e.target.value }) }} /><br /><br />
-                            <button onClick={() => this.login()}>Login</button>
+                            <Link to='/home'><button onClick={() => this.login()}>Login</button></Link>
                             <br />
+                            <br/>
 
                             <label>Not yet registered? Register Now!</label> <br />
 
@@ -105,7 +107,7 @@ class Auth extends Component {
                             <input type="text"
                                 onChange={(e) => { this.setState({ c_password: e.target.value }) }} /><br /><br />
 
-                            <button onClick={() => this.register()}>Register</button> <br />
+                            <Link to='/home'><button onClick={() => this.register()}>Register</button></Link> <br/><br/>
 
                             <label>Already registered? Login here!</label> <br />
 

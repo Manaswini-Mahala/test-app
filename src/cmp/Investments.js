@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class About extends Component{
+class Investments extends Component{
     render(){
         return(
             <div className='app'>
-                About Component
+                Investments Component
             </div>
         );
     }
 }
 
-export default About;
+export default Investments;

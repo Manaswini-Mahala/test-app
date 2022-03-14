@@ -12,12 +12,18 @@ code {
     monospace;
 }
 
-a{
+.a1{
   
   padding: 10px;
   background-color: aqua;
   height: 20px;
-  width: 392px;
+  width: 100%;
   display: inline-block;
   margin-bottom: 20px;
 }
+
+.a2{
+  padding: 15px;
+  display: inline-block;
+}
+

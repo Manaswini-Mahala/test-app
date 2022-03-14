@@ -11,11 +11,13 @@ import {
 class Nav extends Component {
     render() {
         return (
-            <div>
-                <Link to="home" >Home</Link>
-                <Link to="about" >About</Link>
-                <Link to="/" >Login</Link>
+        
+            <div className='nav'>
+                <Link to="home" ><label  >Home</label> </Link>
+                <Link to="about" ><label>About</label> </Link>
+                <Link to="/" ><label>Login</label> </Link>
             </div>
+            
         );
     }
 }

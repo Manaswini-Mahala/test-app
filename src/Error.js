@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class About extends Component{
+class Error extends Component{
     render(){
         return(
-            <div className='app'>
-                About Component
+            <div>
+                Error 404 : Page not found
             </div>
         );
     }
 }
 
-export default About;
+export default Error;
